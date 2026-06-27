@@ -38,6 +38,13 @@ public class Producto {
         return this.nombre;
     }
 
+    public void setNombre(String nome) {
+        if (nome == null || nome.isEmpty()) {
+            throw new IllegalArgumentException("El nombre del producto no puede estar vacío");
+        }
+        this.nombre = nome;
+    }
+
     // Método mostrar
     public void mostrar() {
         System.out.println("=== Producto ===");

@@ -1,5 +1,8 @@
 public class Cliente {
 
+    //private o public
+    // modificadores de acesso
+
     private String nombre;
     private String correo;
     private String ciudad;

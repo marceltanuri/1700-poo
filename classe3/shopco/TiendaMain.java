@@ -14,6 +14,12 @@ public class TiendaMain {
 
         System.out.println("--- CLIENTES ---");
         Cliente c1 = new Cliente();
+        
+        c1.nombre = "Juan Pérez";
+        c1.correo = "juan@hotmail.com";
+        c1.ciudad = "Bogotá";
+        c1.telefono = "3109876543";
+
         Cliente c2 = new Cliente("María Gómez", "maria@gmail.com", "Medellín", "3001234567");
         Cliente c3 = new Cliente(c2);
         c1.mostrar();
@@ -55,21 +61,43 @@ public class TiendaMain {
         /*
          * Preguntas de reflexión:
          * 1. ¿Qué ocurre si una clase no tiene ningún constructor? ¿Qué hace Java automáticamente?
-         * R: Java crea automáticamente un constructor por defecto sin parámetros. Este inicializa 
+         * 
+         R: Java crea automáticamente un constructor por defecto sin parámetros. Este inicializa 
          *    los atributos con sus valores por defecto (null para objetos, 0 para numéricos, false para booleanos).
+         
          * 
          * 2. ¿Por qué es útil el constructor copia en lugar de simplemente asignar objeto2 = objeto1?
+         
          * R: Al asignar objeto2 = objeto1, ambas variables apuntan a la misma dirección de memoria. 
          *    Cualquier cambio en uno afectaría al otro. El constructor copia permite duplicar 
          *    los valores en una nueva instancia completamente independiente.
          * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
          * 3. En la clase Pedido, ¿por qué el total se calcula en el constructor y no se recibe como parámetro?
+         
+         
+         
+         
          * R: Para asegurar que el total siempre sea matemáticamente consistente con la cantidad 
          *    y el precio del producto. Si se recibiera como parámetro, existiría el riesgo de 
          *    insertar un valor erróneo que no corresponda al cálculo real.
          * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
          * 4. ¿Qué ventaja tiene declarar los atributos como private?
-         * R: Promueve el encapsulamiento. Evita que los atributos sean modificados directamente 
+         * 
+         * 
+         
+         R: Promueve el encapsulamiento. Evita que los atributos sean modificados directamente 
          *    desde fuera de la clase, protegiendo el estado interno del objeto y forzando el 
          *    acceso mediante métodos controlados (getters/setters).
          */

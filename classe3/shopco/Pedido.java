@@ -17,10 +17,16 @@ public class Pedido {
 
     // Constructor con parámetros
     public Pedido(String numeroPedido, Cliente cliente, Producto producto, int cantidad) {
+        
+        if(cantidad < 1){
+            throw new IllegalArgumentException("La cantidad debe ser mayor a 0");
+        }
+
         this.numeroPedido = numeroPedido;
         this.cliente = cliente;
         this.producto = producto;
         this.cantidad = cantidad;
+        
         this.total = producto.getPrecio() * cantidad;
     }
 
